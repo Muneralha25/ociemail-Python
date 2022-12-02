@@ -1,5 +1,6 @@
 ﻿# python script for sending SMTP configuration with Oracle Cloud Infrastructure Email Delivery
 
+#!/usr/bin/env python
 
 import smtplib 
 from email.mime.text import MIMEText
@@ -46,7 +47,6 @@ BODY_TEXT = (
 
 password_smtp = 'null'
 
-
 dateToday = time.strftime('%Y%m%d')
 
 Path_File = "<windowspath>\OCVS-INFRA-REPORT_"+dateToday+".html"
@@ -69,7 +69,6 @@ with open(Path_File, 'rb') as fp:
 	ctype = 'application/octet-stream'
 	maintype, subtype = ctype.split('/', 1)
 	
-
 
 # create message container
 msg = EmailMessage()
